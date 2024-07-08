@@ -1,0 +1,8 @@
+#Because sensitive data can exist and to help protect data in transit, ensure HTTPS is enabled for connections to your Amazon OpenSearch Service domains.
+policies:
+  - name: opensearch-https-required
+    resource: aws.elasticsearch
+    filters:
+      - type: value
+        key: DomainEndpointOptions.EnforceHTTPS
+        value: false

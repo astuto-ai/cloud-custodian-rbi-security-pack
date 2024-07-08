@@ -1,0 +1,6 @@
+policies:
+  - name: elb-tls-https-listeners-only
+    resource: elb
+    filters:
+      - not: 
+          - type: is-ssl

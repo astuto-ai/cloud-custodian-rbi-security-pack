@@ -1,0 +1,5 @@
+policies:
+    - name: sagemaker-notebook-no-direct-internet-access
+      resource: aws.sagemaker-notebook
+      filters:
+      - DirectInternetAccess: 'Enabled'

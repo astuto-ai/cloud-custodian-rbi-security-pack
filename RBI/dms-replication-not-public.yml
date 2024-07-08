@@ -1,0 +1,5 @@
+policies:
+    - name: dms-replication-not-public
+      resource: dms-instance
+      filters:
+        - PubliclyAccessible: True

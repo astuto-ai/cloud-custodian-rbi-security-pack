@@ -1,0 +1,5 @@
+policies:
+  - name: rds-automatic-minor-version-upgrade-enabled
+    resource: rds
+    filters:
+      - AutoMinorVersionUpgrade: false

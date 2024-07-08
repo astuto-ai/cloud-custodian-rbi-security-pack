@@ -1,0 +1,9 @@
+#Amazon Simple Storage Service (Amazon S3) Cross-Region Replication (CRR) supports maintaining adequate capacity and availability. CRR enables automatic, asynchronous copying of objects across Amazon S3 buckets to help ensure that data availability is maintained.
+policies:
+  - name: s3-bucket-replication-enabled
+    resource: s3
+    filters:
+      - type: value
+        key: Replication
+        op: eq
+        value: null

@@ -1,0 +1,7 @@
+policies:
+  - name: rest-stages-old-certificateapigateway_restapi_client_certificate_enabled
+    resource: rest-stage
+    filters:
+      - type: value
+        key: client-certificate
+        value: absent

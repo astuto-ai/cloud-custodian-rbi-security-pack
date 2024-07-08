@@ -1,0 +1,8 @@
+policies:
+  - name: s3-bucket-ssl-requests-only
+    resource: s3
+    filters:
+      - not:
+        - type: has-statement
+          statement_ids:
+            - BlockNonSSL

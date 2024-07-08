@@ -1,0 +1,9 @@
+# Ensure that encryption is enabled for your Amazon Relational Database Service (Amazon RDS) snapshots. Because sensitive data can exist at rest, enable encryption at rest to help protect that data.
+policies:
+  - name: rds-snapshot-encrypted
+    resource: rds-snapshot
+    filters: 
+      - type: value
+        key: Encrypted
+        value: false
+        op: eq

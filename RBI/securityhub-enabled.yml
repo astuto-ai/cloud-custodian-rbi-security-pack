@@ -1,0 +1,6 @@
+policies:
+  - name: securityhub-enabled
+    resource: aws.account
+    filters:
+     - type: securityhub
+       enabled: false

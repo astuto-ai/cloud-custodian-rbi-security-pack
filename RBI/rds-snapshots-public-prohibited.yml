@@ -1,0 +1,6 @@
+policies:
+  - name: rds-snapshots-public-prohibited
+    resource: rds-snapshot
+    filters:
+    - type: cross-account
+      everyone_only: true

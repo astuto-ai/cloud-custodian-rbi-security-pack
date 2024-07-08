@@ -1,0 +1,6 @@
+policies:
+  - name: waf-regional-rule-not-empty
+    resource: aws.waf-regional
+    filters:
+      - Rules: empty
+

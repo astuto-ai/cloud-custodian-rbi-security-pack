@@ -1,0 +1,8 @@
+policies:
+  - name: s3-bucket-logging-enabled
+    resource: s3
+    filters:
+      - type: bucket-logging
+        op: not-equal
+        target_bucket: "{account_id}-{region}-s3-logs"
+        target_prefix: "{account}/{source_bucket_name}/"

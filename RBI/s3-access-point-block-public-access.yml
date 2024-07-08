@@ -1,0 +1,7 @@
+policies:
+   - name: s3-access-point-block-public-access
+    resource: aws.s3-access-point
+    filters:
+      - type: value
+        key: PublicAccessBlockConfiguration.BlockPublicAcls.WriteAccess
+        value: false

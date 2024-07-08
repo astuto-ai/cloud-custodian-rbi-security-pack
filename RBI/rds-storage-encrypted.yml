@@ -1,0 +1,7 @@
+policies:
+  - name: rds-storage-encrypted
+    resource: rds
+    filters:
+     - type: value
+       key: kmskey
+       value: null

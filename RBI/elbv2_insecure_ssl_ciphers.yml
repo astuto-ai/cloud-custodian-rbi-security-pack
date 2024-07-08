@@ -1,0 +1,12 @@
+policies:
+  - name: elbv2_insecure_ssl_ciphers
+    resource: app-elb
+    filters:
+      - type: listener
+        key: Protocol
+        value: HTTPS
+      - type: listener
+        key: SslPolicy
+        value: ['ELBSecurityPolicy-TLS-1-1-2017-01','ELBSecurityPolicy-TLS-1-2-2017-01']
+        op: ni
+        matched: true

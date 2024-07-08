@@ -1,0 +1,7 @@
+policies:
+  - name: rds-logging-enabled
+    resource: aws.rds
+    filters:
+      - type: value
+        key: CloudWatchLogsLogGroupArn
+        value: empty

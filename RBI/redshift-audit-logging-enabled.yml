@@ -1,0 +1,7 @@
+policies:
+  - name: redshift-audit-logging-enabled
+    resource: redshift
+    filters:
+      - type: logging
+        key: LoggingEnabled
+        value: false

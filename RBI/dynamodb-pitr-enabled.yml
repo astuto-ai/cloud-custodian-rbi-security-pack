@@ -1,0 +1,8 @@
+policies:
+  - name: dynamodb-pitr-enabled
+    resource: aws.dynamodb-table
+    filters:
+      - type: continuous-backup
+        key: PointInTimeRecoveryDescription.PointInTimeRecoveryStatus
+        op: ne
+        value: ENABLED

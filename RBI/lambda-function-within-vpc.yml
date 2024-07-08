@@ -1,0 +1,8 @@
+# Deploy AWS Lambda functions within an Amazon Virtual Private Cloud (Amazon VPC) for a secure communication between a function and other services within the Amazon VPC. With this configuration, there is no requirement for an internet gateway, NAT device, or VPN connection. All the traffic remains securely within the AWS Cloud. Because of their logical isolation, domains that reside within an Amazon VPC have an extra layer of security when compared to domains that use public endpoints. To properly manage access, AWS Lambda functions should be assigned to a VPC.
+policies:
+  - name: lambda-inside-vpc
+    resource: lambda
+    filters:
+     - type: value
+       key: VpcConfig.VpcId
+       value: null

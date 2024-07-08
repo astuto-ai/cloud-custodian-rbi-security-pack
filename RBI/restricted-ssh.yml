@@ -1,0 +1,13 @@
+policies:
+  - name: restricted-ssh
+    resource: security-group
+    filters: 
+      - or:
+        - type: ingress
+          Ports: [22, 3389,]
+          Cidr:
+            value: "0.0.0.0/0"
+        - type: ingress
+          Ports: [22, 3389,]
+          CidrV6:
+            value: "::/0"

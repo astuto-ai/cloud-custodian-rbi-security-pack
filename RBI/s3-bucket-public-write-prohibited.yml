@@ -1,0 +1,13 @@
+policies: 
+  - name: s3-bucket-public-write-prohibited
+    resource: aws.s3
+    filters:
+      - and: 
+        - type: value
+          key: Acl.Grants[].Grantee.URI
+          op: contains
+          value: http://acs.amazonaws.com/groups/global/AllUsers
+        - type: value
+          key: Acl.Grants[].Permission
+          op: contains
+          value: WRITE

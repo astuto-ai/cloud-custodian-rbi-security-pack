@@ -1,0 +1,6 @@
+policies:
+  - name: ssm-document-not-public
+    resource: ssm-document
+    filters: 
+      - type: cross-account
+        everyone_only: true

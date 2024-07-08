@@ -1,0 +1,7 @@
+policies:
+  - name: emr-master-no-public-ip
+    resource: aws.ec2
+    filters:
+      - 'tag:aws:elasticmapreduce:instance-group-role': "MASTER"
+      - "PublicIpAddress": present
+      - "State.Name": running

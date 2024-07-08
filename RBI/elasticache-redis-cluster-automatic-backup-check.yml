@@ -1,0 +1,9 @@
+# When automatic backups are enabled, Amazon ElastiCache creates a backup of the cluster on a daily basis. The backup can be retained for a number of days as specified by your organization. Automatic backups can help guard against data loss. If a failure occurs, you can create a new cluster, which restores your data from the most recent backup.
+policies:
+  - name: elasticache-redis-cluster-automatic-backup-check
+    resource: cache-cluster
+    filters:
+       - type: value
+         key: SnapshotRetentionLimit
+         value: 0
+         op: eq

@@ -1,0 +1,5 @@
+policies: 
+  - name: vpc-default-security-group-closed
+    resource: security-group
+    filters:
+      - default-vpc

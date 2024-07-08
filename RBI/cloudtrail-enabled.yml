@@ -1,0 +1,7 @@
+policies:
+  - name: cloudtrail-enabled
+    resource: aws.cloudtrail
+    filters:
+     - type: status
+       key: IsLogging
+       value: False

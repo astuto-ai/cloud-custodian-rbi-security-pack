@@ -1,0 +1,8 @@
+# Because sensitive data can exist and to help protect data at rest, ensure encryption is enabled for your Amazon OpenSearch Service (OpenSearch Service) domains.
+policies:
+  - name: elasticsearch-encrypted-at-rest
+    resource: aws.elasticsearch
+    filters:
+      - type: value
+        key: kmskey
+        value: null

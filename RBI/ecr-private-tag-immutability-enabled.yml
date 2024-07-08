@@ -1,0 +1,6 @@
+policies:
+  - name: ecr-private-tag-immutability-enabled
+    resource: ecr
+    filters:
+      - imageTagMutability: MUTABLE
+

@@ -1,0 +1,11 @@
+policies:
+  - name: dynamodb-in-backup-plan
+    resource: aws.dynamodb-table
+    filters:
+      - type: continuous-backup
+        key: ContinuousBackupsStatus
+        op: eq
+        value: DISABLED
+
+
+

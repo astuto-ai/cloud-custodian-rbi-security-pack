@@ -1,0 +1,7 @@
+policies:
+  - name: redshift-cluster-kms-enabled
+    resource: redshift
+    filters:
+     - type: value
+       key: kmskey
+       value: null

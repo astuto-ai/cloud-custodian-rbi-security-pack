@@ -1,0 +1,9 @@
+# Ensure audit logging is enabled on your Amazon OpenSearch Service domains. Audit logging allows you to track user activity on your OpenSearch domains, including authentication successes and failures, requests to OpenSearch, index changes, and incoming search queries.
+policies:
+  - name: opensearch-audit-logging-enabled
+    resource: aws.elasticsearch
+    filters: 
+      - type: value
+        key: 'LogPublishingOptions.AUDIT_LOGS.Enabled'
+        op: eq
+        value: true

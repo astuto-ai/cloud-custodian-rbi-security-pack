@@ -1,0 +1,11 @@
+policies:
+  - name: s3-bucket-versioning-enabled
+    resource: aws.s3
+    filters:
+      - or:
+        - type: value
+          key: Versioning.Status
+          value: Suspended
+        - type: value
+          key: Versioning.Status
+          value: absent

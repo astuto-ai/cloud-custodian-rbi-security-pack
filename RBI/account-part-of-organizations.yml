@@ -1,0 +1,7 @@
+policies:
+  - name: account-part-of-organizations
+    resource: account
+    filters:
+      - type: organization
+        key: Id
+        value: present

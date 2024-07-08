@@ -1,0 +1,8 @@
+policies:
+  - name: iam-root-access-key-check
+    resource: aws.account
+    filters:
+     - type: iam-summary
+       key: AccountAccessKeysPresent
+       op: eq
+       value: true

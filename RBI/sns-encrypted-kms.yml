@@ -1,0 +1,7 @@
+policies:
+  - name: sns-encrypted-kms
+    resource: sns
+    filters:
+     - type: value
+       key: kmskey
+       value: null

@@ -1,0 +1,6 @@
+policies:
+  - name: iam-no-inline-policy-check
+    resource: iam-user
+    filters:
+      - type: has-inline-policy
+        value: true

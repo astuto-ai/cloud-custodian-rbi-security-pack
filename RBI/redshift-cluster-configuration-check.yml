@@ -1,0 +1,10 @@
+policies:
+  - name: redshift-cluster-configuration-check
+    resource: redshift
+    filters:
+     - type: value
+       key: kmskey
+       value: null
+     - type: logging
+       key: LoggingEnabled
+       value: false

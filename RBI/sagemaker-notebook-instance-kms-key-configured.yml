@@ -1,0 +1,7 @@
+policies:
+    - name: sagemaker-notebook-instance-kms-key-configured
+      resource: aws.sagemaker-notebook
+      filters:
+        - type: value
+          key: kmskey
+          value: null

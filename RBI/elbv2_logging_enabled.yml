@@ -1,0 +1,5 @@
+policies:
+  - name: elbv2_logging_enabled
+    resource: app-elb
+    filters:
+      - type: is-not-logging

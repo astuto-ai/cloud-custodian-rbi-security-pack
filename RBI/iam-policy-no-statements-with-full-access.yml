@@ -1,0 +1,5 @@
+policies:
+  - name: iam-policy-no-statements-with-full-access
+    resource: iam-policy
+    filters:
+    - type: has-allow-all

@@ -1,0 +1,8 @@
+# Manage access to resources in the AWS Cloud by ensuring AWS Lambda functions cannot be publicly accessed. Public access can potentially lead to degradation of availability of resources.
+policies:
+  - name: lambda-function-public-access-prohibited
+    resource: lambda
+    filters:
+     - type: value
+       key: VpcConfig.VpcId
+       value: null

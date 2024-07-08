@@ -1,0 +1,10 @@
+policies:
+  - name: subnet-auto-assign-public-ip-disabled
+    resource: subnet
+    filters:
+      - type: value
+        key: MapPublicIpOnLaunch
+        value: true
+    actions:
+      - type: modify
+        MapPublicIpOnLaunch: false

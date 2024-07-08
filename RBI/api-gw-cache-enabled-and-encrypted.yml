@@ -1,0 +1,13 @@
+policies:
+  - name: api-gw-cache-enabled-and-encrypted
+    resource: rest-stage
+    filters:
+      - methodSettings."*/*".cachingEnabled: true
+      - methodSettings."*/*".cacheDataEncrypted: true
+
+
+
+
+
+
+

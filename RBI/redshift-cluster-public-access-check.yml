@@ -1,0 +1,5 @@
+policies:
+  - name: redshift-cluster-public-access-check
+    resource: redshift
+    filters:
+      - PubliclyAccessible: true

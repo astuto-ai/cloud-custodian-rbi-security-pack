@@ -1,0 +1,7 @@
+policies:
+  - name: cmk-backing-key-rotation-enabled
+    resource: kms-key
+    filters:
+      - type: key-rotation-status
+        key: KeyRotationEnabled
+        value: false

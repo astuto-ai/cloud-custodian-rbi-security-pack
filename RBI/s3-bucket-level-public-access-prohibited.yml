@@ -1,0 +1,7 @@
+policies:
+  - name: s3-bucket-level-public-access-prohibited
+    resource: aws.s3
+    filters:
+      - type: check-public-block
+        BlockPublicAcls: false
+        BlockPublicPolicy: false

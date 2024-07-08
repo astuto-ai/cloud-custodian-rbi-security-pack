@@ -1,0 +1,8 @@
+policies:
+  - name: wafv2-logging-enabled
+    resource: aws.wafv2
+    filters:
+      - not:
+          - type: logging
+            key: ResourceArn
+            value: present

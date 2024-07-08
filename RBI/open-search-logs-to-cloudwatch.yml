@@ -1,0 +1,8 @@
+# Ensure Amazon OpenSearch Service domains have error logs enabled and streamed to Amazon CloudWatch Logs for retention and response. Domain error logs can assist with security and access audits, and can help to diagnose availability issues.
+policies:
+  - name: opensearch-logs-to-cloudwatch
+    resource: aws.elasticsearch
+    filters: 
+      - type: value
+        key: LogPublishingOptions.ES_APPLICATION_LOGS.Enabled
+        value: absent

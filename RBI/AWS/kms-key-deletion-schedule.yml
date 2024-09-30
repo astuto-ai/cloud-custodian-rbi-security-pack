@@ -1,0 +1,9 @@
+# To help protect data at rest, ensure necessary customer master keys (CMKs) are not scheduled for deletion in AWS Key Management Service (AWS KMS). Because key deletion is necessary at times, this rule can assist in checking for all keys scheduled for deletion, in case a key was scheduled unintentionally.
+policies:
+  - name: kms-cmk-not-scheduled-for-deletion
+    resource: kms-key
+    filters:
+      - type: value
+        key: KeyState
+        value: PendingDeletion
+        op: ne

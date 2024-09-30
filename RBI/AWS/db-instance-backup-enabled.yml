@@ -1,0 +1,9 @@
+# The backup feature of Amazon RDS creates backups of your databases and transaction logs. Amazon RDS automatically creates a storage volume snapshot of your DB instance, backing up the entire DB instance. The system allows you to set specific retention periods to meet your resilience requirements.
+policies:
+  - name: db-instance-backup-enabled
+    resource: rds
+    filters: 
+      - type: value
+        key: BackupRetentionPeriod
+        op: eq
+        value: 0

@@ -1,0 +1,7 @@
+policies:
+  - name: alb-http-drop-invalid-header-enabled
+    resource: app-elb
+    filters: 
+      - type: attributes
+        key: "routing.http.drop_invalid_header_fields.enabled"
+        value: false

@@ -1,0 +1,8 @@
+# Manage access to the AWS Cloud by ensuring Amazon OpenSearch Service (OpenSearch Service) Domains are within an Amazon Virtual Private Cloud (Amazon VPC). An OpenSearch Service domain within an Amazon VPC enables secure communication between OpenSearch Service and other services within the Amazon VPC without the need for an internet gateway, NAT device, or VPN connection.
+policies:
+  - name: elasticsearch-in-vpc-only
+    resource: aws.elasticsearch
+    filters:
+      - type: value
+        key: VPCOptions.VPCId
+        value: null

@@ -1,0 +1,8 @@
+# Ensure node-to-node encryption for Amazon OpenSearch Service is enabled. Node-to-node encryption enables TLS 1.2 encryption for all communications within the Amazon Virtual Private Cloud (Amazon VPC). Because sensitive data can exist, enable encryption in transit to help protect that data.
+policies:
+  - name: elasticsearch-node-to-node-encryption-check
+    resource: aws.elasticsearch
+    filters:
+      - type: value
+        key: NodeToNodeEncryptionOptions.Enabled
+        value: false

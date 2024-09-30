@@ -1,0 +1,9 @@
+# Deploy Amazon Elastic Compute Cloud (Amazon EC2) instances within an Amazon Virtual Private Cloud (Amazon VPC) to enable secure communication between an instance and other services within the amazon VPC, without requiring an internet gateway, NAT device, or VPN connection. All traffic remains securely within the AWS Cloud. Because of their logical isolation, domains that reside within an Amazon VPC have an extra layer of security when compared to domains that use public endpoints. Assign Amazon EC2 instances to an Amazon VPC to properly manage access.
+policies:
+  - name: ec2-instances-in-vpc
+    resource: ec2
+    filters: 
+      - type: value
+        key: VpcId
+        value: null
+        op: eq

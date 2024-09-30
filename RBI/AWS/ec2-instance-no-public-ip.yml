@@ -1,0 +1,9 @@
+policies:
+  - name: ec2-instance-no-public-ip
+    resource: ec2
+    description: |
+      Find all EC2 instances which has Public IP attached to them
+    filters: 
+      - type: value
+        key: PublicIpAddress
+        value: not-null

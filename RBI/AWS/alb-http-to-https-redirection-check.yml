@@ -1,0 +1,18 @@
+# To help protect data in transit, ensure that your Application Load Balancer automatically redirects unencrypted HTTP requests to HTTPS. Because sensitive data can exist, enable encryption in transit to help protect that data.
+policies:
+  - name: alb-http-to-https-redirection-check
+    resource: app-elb
+    filters:
+      - not:
+         - and:
+            - type: listener
+              key: Protocol
+              value: HTTP
+            - type: listener
+              key: DefaultActions[].Type
+              value: redirect
+              op: contains
+            - type: listener
+              key: DefaultActions[].RedirectConfig.Protocol
+              value: HTTPS
+              op: contains

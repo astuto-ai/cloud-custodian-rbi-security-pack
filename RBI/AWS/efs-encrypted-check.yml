@@ -1,0 +1,7 @@
+policies:
+  - name: efs-encrypted-check
+    resource: efs
+    filters:
+     - type: value
+       key: kmskey
+       value: null

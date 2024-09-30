@@ -1,0 +1,10 @@
+policies:
+  - name: autoscaling-launch-config-public-ip-disabled
+    resource: launch-config
+    filters:
+      - AssociatePublicIpAddress: false
+
+  - name: autoscaling-launch-config-public-ip-not-disabled
+    resource: launch-config
+    filters:
+      - AssociatePublicIpAddress: true

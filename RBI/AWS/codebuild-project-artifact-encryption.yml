@@ -1,0 +1,8 @@
+# To help protect sensitive data at rest, ensure encryption is enabled for your AWS CodeBuild artifacts.
+policies:
+  - name: codebuild-project-artifact-encryption
+    resource: codebuild
+    filters:
+       - type: value
+         key: artifacts.encryptionDisabled
+         value: true

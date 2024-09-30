@@ -1,7 +1,0 @@
-policies:
-  - name: account-not-part-of-organizations
-    resource: account
-    filters:
-      - type: organization
-        key: Id
-        value: absent

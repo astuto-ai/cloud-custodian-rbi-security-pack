@@ -1,7 +1,0 @@
-policies:
-   - name: api-gw-execution-logging-enabled
-    resource: rest-stage
-    filters:
-      - type: value
-        key: 'methodSettings."*/*".loggingLevel'
-        value: absent

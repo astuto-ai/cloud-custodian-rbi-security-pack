@@ -1,8 +1,0 @@
-policies:
-  - name: aurora-resources-protected-by-backup-plan
-    resource: rds
-    filters: 
-      - type: value
-        key: BackupRetentionPeriod
-        op: eq
-        value: 0

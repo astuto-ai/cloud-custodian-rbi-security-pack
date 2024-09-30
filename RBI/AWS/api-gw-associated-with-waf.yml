@@ -1,6 +1,0 @@
-policies:
-  - name: api-gw-associated-with-waf
-    resource: rest-stage
-    filters:
-      - type: waf-enabled
-        state: false

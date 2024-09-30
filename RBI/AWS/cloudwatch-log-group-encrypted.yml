@@ -1,7 +1,0 @@
-policies:
-  - name: cloudwatch-log-group-encrypted
-    resource: log-group
-    filters:
-      - type: value
-        key: kmskey
-        value: null

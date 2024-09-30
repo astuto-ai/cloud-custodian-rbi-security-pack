@@ -1,5 +1,0 @@
-policies:
-  - name: cloudtrail-logFileValidation
-    resource: aws.cloudtrail
-    filters:
-      - LogFileValidationEnabled: false

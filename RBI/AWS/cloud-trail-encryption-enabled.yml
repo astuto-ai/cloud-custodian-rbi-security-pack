@@ -1,5 +1,0 @@
-policies:
-  - name: cloud-trail-encryption-enabled
-    resource: aws.cloudtrail
-    filters:
-      - KmsKeyId: empty

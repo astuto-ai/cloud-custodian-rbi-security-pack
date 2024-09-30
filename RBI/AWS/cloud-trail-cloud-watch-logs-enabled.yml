@@ -1,6 +1,0 @@
-- name: cloud-trail-cloud-watch-logs-enabled
-    resource: aws.cloudtrail
-    filters:
-      - type: value
-        key: CloudWatchLogsLogGroupArn
-        value: empty

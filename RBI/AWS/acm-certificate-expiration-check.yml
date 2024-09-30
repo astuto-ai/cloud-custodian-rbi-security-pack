@@ -1,8 +1,0 @@
-policies:
-  - name: acm-certificate-expiration-check
-    resource: acm-certificate
-    filters:
-      - type: value
-        key: expiration
-        op: lt
-        value: 0

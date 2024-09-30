@@ -1,6 +1,0 @@
-policies:
-  - name: alb-waf-enabled
-    resource: app-elb
-    filters:
-      - type: waf-enabled
-        state: false

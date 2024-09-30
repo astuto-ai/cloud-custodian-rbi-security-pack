@@ -1,8 +1,0 @@
-# To help protect sensitive data at rest, ensure encryption is enabled for your AWS CodeBuild logs stored in Amazon S3.
-policies:
-  - name: codebuild-project-s3-logs-encrypted
-    resource: codebuild
-    filters:
-       - type: value
-         key: s3Logs.encryptionDisabled
-         value: true

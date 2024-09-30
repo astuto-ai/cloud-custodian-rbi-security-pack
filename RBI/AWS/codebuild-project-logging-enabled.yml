@@ -1,9 +1,0 @@
-# Ensure AWS CodeBuild project logging is enabled so that your build output logs are sent to either Amazon CloudWatch or Amazon Simple Storage Service (Amazon S3). Build output logs provide detailed information about your build project.
-policies:
-  - name: codebuild-project-logging-enabled
-    resource: codebuild
-    filters:
-      - type: value
-        key: logsConfig.cloudWatchLogs.status
-        value: ENABLED
-        op: ne

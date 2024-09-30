@@ -1,8 +1,0 @@
-policies:
-  - name: ebs-snapshot-public-restorable-check
-    resource: ebs-snapshot
-    description: |
-      Remove all the publicly accessible ebs-snapshot-public-access
-    filters:
-      - type: cross-account
-        everyone_only: true

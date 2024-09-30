@@ -1,8 +1,0 @@
-# Ensure Amazon API Gateway REST API stages are configured with SSL certificates to allow backend systems to authenticate that requests originate from API Gateway.
-policies:
-  - name: api-gw-ssl-enabled
-    resource: rest-stage
-    filters: 
-      - type: value
-        key: clientcertificate
-        value: absent

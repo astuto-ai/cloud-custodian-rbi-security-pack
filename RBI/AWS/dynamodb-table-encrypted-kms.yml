@@ -1,7 +1,0 @@
-policies:
-  - name: dynamodb-table-encrypted-kms
-    resource: aws.dynamodb-table
-    filters:
-      - type: kms-key
-        key: KeyManager
-        value: AWS

@@ -1,7 +1,0 @@
-policies:
-  - name: ec2-instance-managed-by-systems-manager
-    resource: ec2
-    filters:
-      - type: ssm
-        key: PingStatus
-        value: Online

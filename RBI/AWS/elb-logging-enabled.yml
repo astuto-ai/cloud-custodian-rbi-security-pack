@@ -1,5 +1,0 @@
-policies:
-  - name: elb-logging-enabled
-    resource: elb
-    filters:
-      - type: is-not-logging
